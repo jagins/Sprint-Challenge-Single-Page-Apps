@@ -8,11 +8,11 @@ function Navigation()
     return (
         <div className='navigation'>
             <Switch>
-                <Route exact path='/'>
-                    <WelcomePage/>
-                </Route>
                 <Route path='/characters'>
                     <CharacterList/>
+                </Route>
+                <Route exact path='/'>
+                    <WelcomePage/>
                 </Route>
             </Switch>
             <div className='nav-links'>
