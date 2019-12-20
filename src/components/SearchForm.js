@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CharacterCard from './CharacterCard';
+import {StyledDiv} from '../styles/Styles';
 
 export default function SearchForm(props) 
 {
@@ -29,11 +30,11 @@ export default function SearchForm(props)
        <input id='search' type='text' value={searchTerm} onChange={handleChange}/>
      </form>
 
-     <div className='character-result-list'>
+     <StyledDiv className='character-result-list'>
         {searchResults.map(char => (
           <CharacterCard key={char.id} img={char.image} name={char.name}/>
         ))}
-     </div>
+     </StyledDiv>
     </section>
   );
 }
